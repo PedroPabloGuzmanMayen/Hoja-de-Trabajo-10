@@ -1,6 +1,6 @@
 
 public abstract class GraphMatrix implements IGraph {
-
+1
 	@Override
 	public <T> void addVertex(Vertex<T> v) {
 		// TODO Auto-generated method stub
