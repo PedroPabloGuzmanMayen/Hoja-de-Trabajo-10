@@ -30,6 +30,7 @@ public class DirectedGraphMatrix<V, E> extends AbstractGraphMatrix<V, E> {
 			Vertex<V> vrtx1, vrtx2;
 			vrtx1 = dict.get(label1);
 			vrtx2 = dict.get(label2);
+			System.out.println(vrtx1+ " " + vrtx2);
 			data[vrtx1.getRow()][vrtx2.getRow()] = edge.getLabel();
 		}
 	
@@ -44,5 +45,20 @@ public class DirectedGraphMatrix<V, E> extends AbstractGraphMatrix<V, E> {
 		}
 		
 	}
+	
+	public void printAdjacencyMatrix() {
+	    System.out.println("Matriz de adyacencia:");
+	    for (int i = 0; i < size; i++) {
+	        for (int j = 0; j < size; j++) {
+	            if (data[i][j] != null) {
+	                System.out.print(data[i][j] + " ");
+	            } else {
+	                System.out.print("0 ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	}
+
 	
 }

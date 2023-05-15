@@ -16,7 +16,7 @@ public class AbstractGraphMatrix<V, E> implements IGraph<V, E> {
 	data = new Object[size][size];
 	dict = new Hashtable<V,Vertex<V>>(size);
 	freeList = new ArrayList<Integer>();
-	for (Integer i = 0; i<size-1; i++) {
+	for (Integer i = 0; i<size+1; i++) {
 		freeList.add(i);
 	}
 	edges = new ArrayList<Edge<V, E>> ();
