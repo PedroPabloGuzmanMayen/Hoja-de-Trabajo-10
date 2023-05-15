@@ -7,7 +7,13 @@ public class Main{
     public static void main(String[] args){
       /*
       * Leer contenidos de archivo logistica.txt
+      * 
+      * 
       */
+    	
+    	for (int i =0; i<3-1; i++) {
+    		System.out.println(i);
+    	}
         List<String> contenidoArchivo = leerArchivo("logistica.txt");
 
         for (String linea : contenidoArchivo) {
