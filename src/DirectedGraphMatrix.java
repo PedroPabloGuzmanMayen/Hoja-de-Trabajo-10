@@ -59,6 +59,24 @@ public class DirectedGraphMatrix<V, E> extends AbstractGraphMatrix<V, E> {
 	        System.out.println();
 	    }
 	}
+	
+
+	
+	public Object[][] getMatrix() {
+		return this.data;
+	}
+	public  void fillMatrix() {
+		for (int i=0; i<this.size;i++) {
+			for (int j=0; j<this.size;j++) {
+				if(i==j) {
+					data[i][j]=0;
+				}
+				if(data[i][j] == null) {
+					data[i][j] = Integer.MAX_VALUE;
+				}
+			}
+		}
+	}
 
 	
 }

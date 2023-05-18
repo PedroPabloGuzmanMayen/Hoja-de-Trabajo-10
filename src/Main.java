@@ -9,6 +9,8 @@ public class Main{
     	
     	build.buildGraphFromFile(graph);
     	
+    	graph.fillMatrix();
+    	
     	graph.printAdjacencyMatrix();
     }
 
