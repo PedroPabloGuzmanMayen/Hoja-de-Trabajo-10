@@ -3,10 +3,12 @@ import java.util.Hashtable;
 import java.util.Map;
 
 public class DirectedGraphMatrix<V, E> extends AbstractGraphMatrix<V, E> {
- 
+
+	
 	
 	public DirectedGraphMatrix(int size) {
 		super(size, true);
+
 	}
 	
 	public void add(V label) {
@@ -76,6 +78,15 @@ public class DirectedGraphMatrix<V, E> extends AbstractGraphMatrix<V, E> {
 				}
 			}
 		}
+	}
+	
+	public Map<V, Vertex<V>> getDict() {
+		return this.dict;
+	}
+	
+	public int getSize() {
+		return this.size;
+		
 	}
 
 	

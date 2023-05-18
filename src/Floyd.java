@@ -21,22 +21,22 @@ public class Floyd<V, E> {
 	
 	private void calculate(V origin, V destination) {
 		Object[][] matrix = graph.getMatrix();
-		Object[][] next = new Object[graph.size()][graph.size()];
+		Object[][] next = new Object[graph.getSize()][graph.getSize()];
 		Integer index1 = searchIndex(origin);
 		Integer index2 = searchIndex(destination);
 		//Iniciar next
 		
-		for (int i = 0; i < graph.size; i++) {
-	        for (int j = 0; j < graph.size; j++) {
+		for (int i = 1; i < graph.getSize(); i++) {
+	        for (int j = 1; j < graph.getSize(); j++) {
 	
 	            next[i][j] = (i == j || (Integer)matrix[i][j] == Integer.MAX_VALUE) ? null : j;
 
 	        }
 	    }
 		
-		for (int k = 0; k < graph.size; k++) {
-	       for (int i=0; i<graph.size();i++) {
-	    	   for (int j=0; j<graph.size();j++) {
+		for (int k = 1; k < graph.getSize(); k++) {
+	       for (int i=1; i<graph.getSize();i++) {
+	    	   for (int j=0; j<graph.getSize();j++) {
 	    		   Integer altDist = (Integer)matrix[i][j] +(Integer)matrix[k][j];
 	    		   next[i][j] =next[i][k];
 	    	   }
